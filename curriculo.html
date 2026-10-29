@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Marco Antonio Teodoro da Silva</title>
+    <!-- Folha de estilos com layout Flexbox, estilização do <aside>, classes e media queries (@media) -->
+    <link rel="stylesheet" href="curriculo.css">
+</head>
+
+<body>
+
+    <!-- .curriculo-container usa Flexbox para distribuir as duas colunas do currículo -->
+    <main class="curriculo-container">
+        <!-- Coluna da esquerda (Perfil, Contato, Habilidades e Idiomas) -->
+        <!-- .perfil-info é a coluna lateral (<aside>); em telas menores (<= 768px) fica acima do conteúdo principal -->
+        <aside class="perfil-info">
+            <div class="header">
+                <figure class="foto-perfil">
+                    <img src="./imagens/curriculoimage.jpeg" alt="Foto de Marco Antonio Teodoro da Silva">
+                </figure>
+                <h1>Marco Antonio Teodoro da Silva</h1>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas</p>
+            </div>
+
+            <!-- .contato reúne as informações e links de contato com ícones -->
+            <section class="contato">
+                <h2>Contato</h2>
+                <ul>
+                    <li>
+                        <strong>Localização:</strong> Figueira, PR - Brasil
+                    </li>
+                    <li>
+                        <img src="./icones/whatsapp.svg" alt="WhatsApp" class="icone">
+                        <strong>Telefone:</strong>
+                        <a href="https://wa.me/5543984316983" target="_blank" rel="noopener noreferrer">(43) 98431-6983</a>
+                    </li>
+                    <li>
+                        <strong>Email:</strong>
+                        <a href="mailto:marco.silva@email.com">marco.silva@email.com</a>
+                    </li>
+                    <li>
+                        <img src="./icones/github.svg" alt="GitHub" class="icone">
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/marcosilvat" target="_blank" rel="noopener noreferrer">github.com/marcosilvat</a>
+                    </li>
+                    <li>
+                        <img src="./icones/linkedin.svg" alt="LinkedIn" class="icone">
+                        <strong>LinkedIn:</strong>
+                        <a href="https://linkedin.com/in/marcosilvat" target="_blank" rel="noopener noreferrer">linkedin.com/in/marcosilvat</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- .habilidades contém a lista de competências técnicas do perfil -->
+            <section class="habilidades">
+                <h2>Habilidades</h2>
+                <h3>Linguagens e Tecnologias</h3>
+                <ul>
+                    <li><img src="./icones/c.svg" alt="C Logo" class="icone"> Linguagem C</li>
+                    <li><img src="./icones/html.svg" alt="HTML5 Logo" class="icone"> HTML5</li>
+                    <li><img src="./icones/css.svg" alt="CSS3 Logo" class="icone"> CSS3 (Flexbox &amp; Grid)</li>
+                    <li><img src="./icones/github.svg" alt="GitHub Logo" class="icone"> Git &amp; GitHub</li>
+                </ul>
+
+                <h3>Sistemas e Softwares</h3>
+                <ul>
+                    <li><img src="./icones/windows.svg" alt="Windows Logo" class="icone"> Windows</li>
+                    <li><img src="./icones/linux.svg" alt="Linux Tux" class="icone"> Linux</li>
+                    <li><img src="./icones/office.svg" alt="Microsoft Office" class="icone"> Microsoft Office</li>
+                </ul>
+            </section>
+
+            <!-- .idiomas contém os idiomas falados -->
+            <section class="idiomas">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>🇧🇷 Português - Nativo</li>
+                    <li>🇺🇸 Inglês - Básico (A2)</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Coluna da direita (Resumo, Experiência, Educação, ODS e Contato) -->
+        <!-- .main-content é a coluna principal e recebe o espaço flexível maior (flex: 2) -->
+        <section class="main-content">
+            <!-- Menu de navegação interna -->
+            <nav class="menu-interno" aria-label="Menu de navegação interna">
+                <a href="#summary">Resumo</a>
+                <a href="#experience">Experiência</a>
+                <a href="#education">Educação</a>
+                <a href="#ods">ODS</a>
+                <a href="#contato-modal">Contato</a>
+            </nav>
+
+            <!-- .resumo apresenta uma visão geral do perfil profissional -->
+            <section id="summary" class="resumo">
+                <h2>Resumo</h2>
+                <p>
+                    Sou estudante de Análise e Desenvolvimento de Sistemas na UTFPR, apaixonado por tecnologia e inovação.
+                    Tenho experiência prática acadêmica em desenvolvimento web, programação em C, HTML5 e CSS3 (Flexbox e Grid),
+                    além de domínio em sistemas operacionais Windows e Linux. Busco oportunidades para aplicar meus conhecimentos
+                    e contribuir para projetos que promovam a educação de qualidade e o desenvolvimento sustentável.
+                </p>
+            </section>
+
+            <!-- .experiencia contém os blocos .item-experiencia e seus períodos -->
+            <section id="experience" class="experiencia">
+                <h2>Experiência e Projetos Acadêmicos</h2>
+                <!-- Cada .item-experiencia é um registro independente -->
+                <div class="item-experiencia">
+                    <h3>Desenvolvedor Web &amp; Programação | Projetos Acadêmicos (UTFPR)</h3>
+                    <p class="periodo">2026 - Presente</p>
+                    <ul>
+                        <li>Desenvolvimento de páginas web semânticas e responsivas utilizando HTML5, CSS3, Flexbox, CSS Grid e Media Queries (<code>@media</code>).</li>
+                        <li>Implementação de algoritmos, estruturas de dados e projetos em Linguagem C e Programação Orientada a Objetos.</li>
+                        <li>Versionamento de código e publicação de projetos em repositórios no GitHub.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- .educacao contém o registro de formação, estilizado como .item-educacao -->
+            <section id="education" class="educacao">
+                <h2>Educação</h2>
+                <div class="item-educacao">
+                    <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                    <p class="periodo">Universidade Tecnológica Federal do Paraná (UTFPR) - Câmpus Cornélio Procópio | 2026 - Presente</p>
+                </div>
+            </section>
+
+            <!-- .ods destaca o Objetivo de Desenvolvimento Sustentável da ONU -->
+            <section id="ods" class="ods">
+                <h2>ODS que pretendo contribuir</h2>
+                <figure class="ods-figure">
+                    <img src="https://brasil.un.org/profiles/undg_country/themes/custom/undg/images/SDGs/pt-br/SDG-4.svg" alt="ODS 4 - Educação de Qualidade" width="130">
+                    <figcaption><strong>ODS 4:</strong> Educação de Qualidade</figcaption>
+                </figure>
+            </section>
+
+            <!-- Botão e modal interativo de contato -->
+            <section id="contato-modal" class="acao-contato">
+                <h2>Fale Comigo</h2>
+                <button type="button" class="btn-contato" onclick="modalContato.showModal()">Enviar informações de contato</button>
+
+                <dialog id="modalContato" class="modal-contato">
+                    <form id="formContato" method="dialog">
+                        <fieldset>
+                            <legend><strong>Formulário de Contato</strong></legend>
+
+                            <p>
+                                <label for="nome">Nome completo:</label><br>
+                                <input type="text" id="nome" name="nome" required>
+                            </p>
+
+                            <p>
+                                <label for="instagram">Link para o Instagram:</label><br>
+                                <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu-usuario" required>
+                            </p>
+
+                            <p>
+                                <label for="whatsapp">Número do WhatsApp:</label><br>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
+                            </p>
+
+                            <div class="modal-botoes">
+                                <button type="submit" class="btn-contato">Enviar</button>
+                                <button type="button" class="btn-fechar" onclick="modalContato.close()">Fechar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </dialog>
+            </section>
+        </section>
+    </main>
+
+</body>
+
+</html>

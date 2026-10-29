@@ -1,0 +1,323 @@
+/*
+ * Estilos gerais: aplicados ao documento inteiro pelo seletor body.
+ * clamp() limita o padding entre 12px e 20px, variando com a largura da tela.
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: clamp(12px, 4vw, 20px);
+  background-color: #f4f4f4;
+  color: #2c3e50;
+}
+
+/* HTML: <main class="curriculo-container">. Flexbox cria as duas colunas no desktop. */
+.curriculo-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Coluna da esquerda: HTML <aside class="perfil-info"> */
+.perfil-info {
+  flex: 1;
+  /* Ocupa 1 parte do espaço flexível disponível */
+  min-width: 0;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  /* Organiza os elementos internos em coluna */
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  text-align: center;
+}
+
+.foto-perfil {
+  margin: 0 0 16px 0;
+}
+
+.foto-perfil img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ecf0f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.perfil-info h1 {
+  /* Nome no aside; clamp() escala o título dentro dos limites definidos */
+  font-size: clamp(1.4rem, 2.8vw, 1.85rem);
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.perfil-info h2 {
+  font-size: 1.2em;
+  margin-top: 28px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.perfil-info h3 {
+  font-size: 0.95em;
+  margin: 14px 0 8px 0;
+  text-align: left;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.perfil-info p {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.perfil-info section {
+  width: 100%;
+}
+
+.perfil-info ul {
+  /* Listas de contato, habilidades e idiomas dentro do aside */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.perfil-info li {
+  /* Itens das listas do aside: evita que textos longos causem overflow horizontal */
+  margin-bottom: 10px;
+  text-align: left;
+  overflow-wrap: anywhere;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.perfil-info a {
+  /* Links de WhatsApp, Email, LinkedIn e GitHub; permite quebrar URLs longas */
+  color: inherit;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.icone {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Coluna da direita: corresponde a <section class="main-content"> no HTML */
+.main-content {
+  flex: 2;
+  /* Ocupa 2 partes do espaço flexível disponível */
+  min-width: 0;
+  padding: 40px 50px;
+  overflow-wrap: anywhere;
+}
+
+.menu-interno {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.menu-interno a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.menu-interno a:hover {
+  text-decoration: underline;
+}
+
+.main-content section {
+  margin-bottom: 30px;
+}
+
+.main-content h2 {
+  /* Títulos Resumo, Experiência, Educação e ODS; clamp ajusta a escala tipográfica */
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  color: #2c3e50;
+  border-bottom: 2px solid #bdc3c7;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.item-experiencia,
+.item-educacao {
+  /* HTML: blocos de cada experiência e da formação */
+  margin-bottom: 20px;
+}
+
+.item-experiencia h3,
+.item-educacao h3 {
+  margin: 0;
+  font-size: 1.15em;
+  color: #2980b9;
+}
+
+.periodo {
+  font-style: italic;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+
+.item-experiencia ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.ods-figure {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ods-figure img {
+  border-radius: 8px;
+}
+
+.btn-contato {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-contato:hover {
+  background-color: #1f6391;
+}
+
+.btn-fechar {
+  background-color: #7f8c8d;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.modal-contato {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contato fieldset {
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  padding: 16px;
+  width: min(320px, 80vw);
+}
+
+.modal-contato input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.modal-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Responsividade progressiva: até 900px, reduz espaços antes de empilhar as colunas */
+@media (max-width: 900px) {
+  .curriculo-container {
+    margin: 24px auto;
+  }
+
+  .perfil-info {
+    padding: 32px 24px;
+    background-color: #fcc2b9;
+    color: #050505;
+  }
+
+  .perfil-info h1 {
+    color: #050505;
+  }
+
+  .perfil-info h2 {
+    border-bottom-color: #050505;
+  }
+
+  .main-content {
+    padding: 32px;
+  }
+}
+
+/* Em telas de até 768px, empilha <aside> e <section class="main-content"> */
+@media (max-width: 768px) {
+  .curriculo-container {
+    flex-direction: column;
+    margin: 12px auto;
+    /* Em telas menores, as colunas se empilham */
+  }
+
+  .perfil-info {
+    padding: 30px 20px;
+    border-bottom: 5px solid #2c3e50;
+    background-color: #4b0202;
+    color: #ffffff;
+  }
+
+  .perfil-info h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    color: #ffffff;
+  }
+
+  .perfil-info h2 {
+    border-bottom-color: #ecf0f1;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+}
+
+/* Até 600px, reduz padding do body, aside e section para liberar largura no celular */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .perfil-info {
+    padding: 24px 16px;
+    background-color: #2c7b02;
+    color: #ffffff;
+  }
+
+  .main-content {
+    padding: 24px 16px;
+  }
+}
